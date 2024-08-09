@@ -8,7 +8,7 @@ function App() {
     useEffect(() => {
         const predict = async (url: string) => {
             try {
-                const response = await axios.post('http://127.0.0.1:5000/predict', { url });
+                const response = await axios.post('https://phisx-latest.onrender.com/predict', { url });
                 setStatus(response.data.prediction);
             } catch (error) {
                 console.error('Error:', error);
